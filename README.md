@@ -33,9 +33,10 @@ g++ -Iinclude src/rm.cpp
 g++ -Iinclude src/umount.cpp
 g++ -Iinclude src/mkfs.cpp
 g++ -Iinclude src/installer.cpp
-
 5. Run the installer by ./installer . When the installation is completed, yaud will not activate. To activate yaud run yaud --a .
 6. Thats it. Now you can use yaud.
+
+NOTE: Yaud's warnings and help table is turkish for now. It will be english soon.
 
 #License
 
