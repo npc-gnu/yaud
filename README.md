@@ -17,27 +17,28 @@ Yes. Because when it is installing, it copies files to /usr/local/bin and it nee
 How to install it?
 
 1. Install the requried apps:
-Arch and Arch based: sudo pacman -S git gcc g++
-Debian and Debian based: sudo apt install git g++ gcc
-Fedora/RHEL and Fedora/RHEL based: sudo dnf install git gcc-c++
-openSUSE and openSUSE based: sudo zypper install git gcc-c++
-Alpine and Alpine based: sudo apk add git g++
-Old Pardus(not debian based) versions and PisiLinux: sudo pisi it git gcc
-Gentoo and Gentoo based: sudo emerge --ask dev-vcs/git sys-devel/gcc
-2. Clone the repo with git clone... 
+Arch and Arch based: ´sudo pacman -S git gcc g++´
+Debian and Debian based: ´sudo apt install git g++ gcc´
+Fedora/RHEL and Fedora/RHEL based: ´sudo dnf install git gcc-c++´
+openSUSE and openSUSE based: ´sudo zypper install git gcc-c++´
+Alpine and Alpine based: ´sudo apk add git g++´
+Old Pardus(not debian based) versions and PisiLinux: ´sudo pisi it git gcc´
+Gentoo and Gentoo based: ´sudo emerge --ask dev-vcs/git sys-devel/gcc´
+2. Clone the repo with ´git clone git clone https://github.com/npc-gnu/yaud.git´ .  
 3. Enter the directory with running cd yaud. Dont enter the yaud/src or yaud/include otherwise you cant compile it.
 4. Compile by running these commands:
-g++ -Iinclude src/yaud.cpp -o yaud
+´´´g++ -Iinclude src/yaud.cpp -o yaud
 g++ -Iinclude src/dd.cpp
 g++ -Iinclude src/rm.cpp
 g++ -Iinclude src/umount.cpp
 g++ -Iinclude src/mkfs.cpp
-g++ -Iinclude src/installer.cpp
-5. Run the installer by ./installer . When the installation is completed, yaud will not activate. To activate yaud run yaud --a .
+g++ -Iinclude src/installer.cpp´´´
+5. Run the installer by ´./installer´ . When the installation is completed, yaud will not activate. To activate yaud run yaud --a .
 6. Thats it. Now you can use yaud.
 
 NOTE: Yaud's warnings and help table is turkish for now. It will be english soon.
 
 #License
 
-This project lisenced by GNU General Public Lisence v3. (GPLv3) .
+This project lisenced by GNU General Public Lisence v3. (GPLv3).
+And every part of this app licensed by GNU General Public Lisence v3.
