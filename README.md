@@ -33,8 +33,6 @@ g++ -Iinclude src/yaud.cpp -o yaud && g++ -Iinclude src/dd.cpp -o dd && g++ -Iin
 ## 5. Run the installer by `sudo ./installer` . When the installation is completed, yaud will not activate. To activate yaud run `yaud --a` .
 ## 6. Thats it. Now you can use yaud.
 
-NOTE: Yaud's warnings and help table is turkish for now. It will be english soon.
-
 # License
 
 This project and every part of it lisenced by GNU General Public Lisence v3. (GPLv3).
