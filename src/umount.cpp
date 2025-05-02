@@ -23,7 +23,7 @@ bool is_dangerous(int argc, char* argv[]) {
 
 int main(int argc, char* argv[]) {
     if (yaud_enabled() && is_dangerous(argc, argv)) {
-        cout << "[YAUD]: Uyarı! umount komutu kritik bir dizini çıkarmaya çalışıyor. Uyarıyı/YAUD'u kapamak için yaud --c komutunu kullanın." << endl;
+        cout << "[YAUD]: Warning! umount is trying to unmount important drives. To close yaud, run yaud --c ." << endl;
         return 1;
     }
 

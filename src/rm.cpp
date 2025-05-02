@@ -29,8 +29,8 @@ bool is_dangerous(int argc, char* argv[]) {
 
 int main(int argc, char* argv[]) {
     if (yaud_enabled() && is_dangerous(argc, argv)) {
-        cout << "[YAUD]: Uyarı! rm komutu bu tehlikeli yerlerde sistemi bozabilir!" << endl;
-        cout << "[YAUD]: Uyarıyı/YAUD'u kapamak için yaud --c komutunu kullanın." << endl;
+        cout << "[YAUD]: Warning! rm command can delete important OS datas and corrupt system in dangerous directorys." << endl;
+        cout << "[YAUD]: To close yaud, run yaud --c ." << endl;
         return 1;
     }
 

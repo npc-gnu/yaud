@@ -18,7 +18,7 @@ bool is_dangerous(int argc, char* argv[]) {
 
 int main(int argc, char* argv[]) {
     if (yaud_enabled() && is_dangerous(argc, argv)) {
-        cout << "[YAUD]: Uyarı! dd komutu bir sürücüyü silebilir. Uyarıyı/YAUD'u kapamak için yaud --c komtunu kullanın." << endl;
+        cout << "[YAUD]: Warning! dd command can delete an entire drive. To close yaud, run sudo yaud --c ." << endl;
         return 1;
     }
 

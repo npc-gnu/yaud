@@ -7,14 +7,14 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    // Root kontrolü
+    // Root control
     if (getuid() != 0) {
-        cerr << "Bu program yalnızca root olarak çalıştırılabilir!" << endl;
-        return 1;  // Hata kodu döndürerek çıkış yap
+        cerr << "This app can only run with sudo!" << endl;
+        return 1;  // error
     }
 
     if (argc < 2) {
-        cerr << "Bir argüman girmen gerekiyor. --h ile yardım alabilirsin." << endl;
+        cerr << "Not enough arguments. To get help, run yaud --h ." << endl;
         return 1;
     }
 
@@ -22,15 +22,15 @@ int main(int argc, char* argv[]) {
 
     if (arg == "--s") {
         if (yaud_enabled()) {
-            cout << "[YAUD]: Aktif durumda." << endl;
+            cout << "[YAUD]: Active." << endl;
         } else {
-            cout << "[YAUD]: Pasif durumda." << endl;
+            cout << "[YAUD]: Inactive/Dead." << endl;
         }
     } else if (arg == "--c") {
         if (remove(status_file.c_str()) == 0) {
-            cout << "[YAUD]: Kapatıldı." << endl;
+            cout << "[YAUD]: Closed." << endl;
         } else {
-            cerr << "[YAUD]: Kapatılamadı. Hata oluştu." << endl;
+            cerr << "[YAUD]: Can't close. Error." << endl;
         }
     } else if (arg == "--a") {
         ofstream status(status_file);
