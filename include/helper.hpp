@@ -15,11 +15,11 @@ inline bool is_root() {
 
 inline void show_help() {
     std::cout << "Yet Another User Defender (YAUD)" << std::endl;
-    std::cout << "Kullanım: yaud [seçenekler]" << std::endl;
-    std::cout << "  --a     YAUD'u ve uyarıları aktifleştir" << std::endl; 
-    std::cout << "  --s     Durumu kontrol et (açık mı kapalı mı)" << std::endl;
-    std::cout << "  --c     YAUD'u kapat (uyarıları devre dışı bırak)" << std::endl;
-    std::cout << "  --h     Yardım menüsünü göster" << std::endl;
+    std::cout << "How to use: yaud 'option' ." << std::endl;
+    std::cout << "  --a     Activate yaud." << std::endl; 
+    std::cout << "  --s     Show it is active or dead." << std::endl;
+    std::cout << "  --c     close yaud." << std::endl;
+    std::cout << "  --h     Show help menu." << std::endl;
 }
 
 inline bool yaud_enabled() {
