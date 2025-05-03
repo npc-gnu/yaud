@@ -24,7 +24,7 @@ openSUSE and openSUSE based: `sudo zypper install git gcc-c++`
 Alpine and Alpine based: `sudo apk add git g++`
 Old Pardus(not debian based) versions and PisiLinux: `sudo pisi it git gcc`
 Gentoo and Gentoo based: `sudo emerge --ask dev-vcs/git sys-devel/gcc`
-## 2. Clone the repo with `git clone git clone https://github.com/npc-gnu/yaud.git` .  
+## 2. Clone the repo with `git clone https://github.com/npc-gnu/yaud.git` .  
 ## 3. Enter the directory with running cd yaud. Dont enter the yaud/src or yaud/include otherwise you cant compile it.
 ## 4. Compile by running these commands:
 
