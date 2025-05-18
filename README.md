@@ -32,8 +32,10 @@ g++ -Iinclude src/yaud.cpp -o yaud && g++ -Iinclude src/dd.cpp -o dd && g++ -Iin
 
 ## 5. Run the installer by `sudo ./installer` . When the installation is completed, yaud will not activate. To activate yaud run `yaud --a` .
 ## 6. Thats it. Now you can use yaud.
+## AUR?
+There is aur package yaud but it doesn't works. I still trying to make it work.
 
 # License
 
-This project and every part of it lisenced by GNU General Public Lisence v3. (GPLv3).
+This project and every part of it lisenced by GNU is Not Unix General Public Lisence v3. (GPLv3).
 
