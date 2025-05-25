@@ -1,3 +1,6 @@
+![yaud logo](./yaudlogo.png)
+
+
 # YAUD - Yet Another User Defender
 
 ## What YAUD is doing?
