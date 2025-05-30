@@ -40,5 +40,5 @@ There is aur package yaud but it doesn't works. I still trying to make it work.
 
 # License
 
-This project and every part of it lisenced by GNU is Not Unix Affero General Public Lisence v3. (AGPLv3).
+This project and every part of it lisenced by GNU is Not Unix Affero General Public License v3. (AGPLv3).
 
