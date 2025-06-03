@@ -1,44 +1,108 @@
 ![yaud logo](./yaudlogo.png)
 
-
 # YAUD - Yet Another User Defender
 
-## What YAUD is doing?
-YAUD is a program that makes using terminal safer for new GNU/Linux users and blocks rm(in dangerous directorys), umount,dd and mkfs commands while it is working. When YAUD is closed, it is not saying anything.
+## What is YAUD?
 
-## How to use YAUD?
+**YAUD** is a terminal safety tool designed to help new GNU/Linux users. It prevents potentially dangerous commands like `rm` (in critical directories), `umount`, `dd`, and `mkfs` from running while it is active. When YAUD is inactive, it does nothing and allows all commands.
 
-`sudo yaud --h` (help) help menu
-`sudo yaud --s` (status) Shows it is working or not
-`sudo yaud --c` (close) closes YAUD
-`sudo yaud --a` (activate) opens YAUD
+## How to Use YAUD
 
-## Is it have to run with sudo?
+| Command               | Description                         |
+|-----------------------|-------------------------------------|
+| `sudo yaud --h`       | Displays the help menu              |
+| `sudo yaud --s`       | Shows whether YAUD is active        |
+| `sudo yaud --c`       | Closes (deactivates) YAUD           |
+| `sudo yaud --a`       | Activates YAUD                      |
 
-Yes. Because when it is installing, it copies files to /usr/local/bin and it needs root to do it. And for detecting things like sudo rm -rf / it needs to run with sudo. If it doesn't run with sudo it will give error.
+## Does it Require Sudo?
 
-# How to install it?
+Yes. YAUD must be run with `sudo` for the following reasons:
 
-## 1. Install the requried apps:
-Arch and Arch based: `sudo pacman -S git gcc g++`
-Debian and Debian based: `sudo apt install git g++ gcc`
-Fedora/RHEL and Fedora/RHEL based: `sudo dnf install git gcc-c++`
-openSUSE and openSUSE based: `sudo zypper install git gcc-c++`
-Alpine and Alpine based: `sudo apk add git g++`
-Old Pardus(not debian based) versions and PisiLinux: `sudo pisi it git gcc`
-Gentoo and Gentoo based: `sudo emerge --ask dev-vcs/git sys-devel/gcc`
-## 2. Clone the repo with `git clone https://github.com/npc-gnu/yaud.git` .  
-## 3. Enter the directory with running cd yaud. Dont enter the yaud/src or yaud/include otherwise you cant compile it.
-## 4. Compile by running these commands:
+- During installation, it copies files to `/usr/local/bin`, which requires root permissions.
+- To monitor or block commands like `sudo rm -rf /`, YAUD itself must also run as root.
+- If run without `sudo`, it will return an error.
 
+## Installation Guide
+
+### 1. Install Required Packages
+
+**Arch / Arch-based:**
+```bash
+sudo pacman -S git gcc g++
+```
+
+**Debian / Ubuntu-based:**
+```bash
+sudo apt install git g++ gcc
+```
+
+**Fedora / RHEL-based:**
+```bash
+sudo dnf install git gcc-c++
+```
+
+**openSUSE:**
+```bash
+sudo zypper install git gcc-c++
+```
+
+**Alpine:**
+```bash
+sudo apk add git g++
+```
+
+**Old Pardus (non-Debian) / PisiLinux:**
+```bash
+sudo pisi it git gcc
+```
+
+**Gentoo:**
+```bash
+sudo emerge --ask dev-vcs/git sys-devel/gcc
+```
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/npc-gnu/yaud.git
+```
+
+### 3. Navigate to the Project Directory
+
+```bash
+cd yaud
+```
+
+> ⚠️ Do **not** enter `yaud/src` or `yaud/include` directly, otherwise the build may fail.
+
+### 4. Compile the Project
+
+```bash
 g++ -Iinclude src/yaud.cpp -o yaud && g++ -Iinclude src/dd.cpp -o dd && g++ -Iinclude src/rm.cpp -o rm && g++ -Iinclude src/umount.cpp -o umount && g++ -Iinclude src/mkfs.cpp -o mkfs && g++ -Iinclude src/installer.cpp -o installer
+```
 
-## 5. Run the installer by `sudo ./installer` . When the installation is completed, yaud will not activate. To activate yaud run `yaud --a` .
-## 6. Thats it. Now you can use yaud.
-## AUR?
-There is aur package yaud but it doesn't works. I still trying to make it work.
+### 5. Install the Program
 
-# License
+```bash
+sudo ./installer
+```
 
-This project and every part of it lisenced by GNU is Not Unix Affero General Public License v3. (AGPLv3).
+> After installation, YAUD is **not** activated by default.  
+> To activate it, run:
 
+```bash
+yaud --a
+```
+
+### 6. You're Done!
+
+YAUD is now ready to help protect your terminal experience.
+
+## AUR Support?
+
+There is an [AUR package](https://aur.archlinux.org/packages/yaud), but it currently doesn't work. I'm still working on fixing it.
+
+## License
+
+This project is licensed under the [GNU Affero General Public License v3 (AGPLv3)](https://www.gnu.org/licenses/agpl-3.0.html).
