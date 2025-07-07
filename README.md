@@ -76,18 +76,11 @@ cd yaud
 
 > ⚠️ Do **not** enter `yaud/src` or `yaud/include` directly, otherwise the build may fail.
 
-### 4. Compile the Project
-
+### 4. Compile and install the Project
 ```bash
-g++ -Iinclude src/yaud.cpp -o yaud && g++ -Iinclude src/dd.cpp -o dd && g++ -Iinclude src/rm.cpp -o rm && g++ -Iinclude src/umount.cpp -o umount && g++ -Iinclude src/mkfs.cpp -o mkfs && g++ -Iinclude src/installer.cpp -o installer
+chmod +x compile
+./compile
 ```
-
-### 5. Install the Program
-
-```bash
-sudo ./installer
-```
-
 > After installation, YAUD is **not** activated by default.  
 > To activate it, run:
 
